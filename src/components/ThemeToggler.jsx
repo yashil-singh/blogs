@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
-export const ThemeToggler = () => {
+export const ThemeToggler = ({ addText, textSize }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   function setTheme() {
@@ -39,13 +39,16 @@ export const ThemeToggler = () => {
   return (
     <button
       onClick={handleClick}
-      className="text-3xl transition-all duration-200"
+      className={`w-full transition-all duration-200 ${
+        addText ? (textSize ? textSize : "text-lg") : "text-3xl"
+      } flex items-center gap-2`}
     >
       {isDarkMode ? (
         <MdOutlineDarkMode className="text-tsecondary hover:text-tdisabled transition-all" />
       ) : (
         <MdOutlineLightMode className="text-tsecondary hover:text-tdisabled transition-all" />
       )}
+      {addText && (isDarkMode ? "Dark Mode" : "Light Mode")}
     </button>
   );
 };

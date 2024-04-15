@@ -3,14 +3,14 @@ import Sidebar from "./Sidebar";
 
 const MainContainer = ({ children, showSideBar }) => {
   return (
-    <div className="h-[calc(100vh-60px)]">
+    <div className="min-h-[calc(100vh-60px)] ">
       {showSideBar ? (
         <>
           <Sidebar />
-          <div className="ml-[300px] p-5">{children}</div>
+          <div className="md:ml-[270px] p-5 pt-[75px]">{children}</div>
         </>
       ) : (
-        children
+        <div className="p-5 pt-[75px]">{children}</div>
       )}
     </div>
   );

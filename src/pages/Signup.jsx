@@ -7,23 +7,14 @@ import { FcGoogle } from "react-icons/fc";
 const Signup = () => {
   return (
     <MainContainer>
-      <div className="flex justify-center items-center h-full">
+      <div className="flex justify-center items-center min-h-[calc(100vh-100px)]">
         <div className="bg-card border border-border w-full max-w-[500px] rounded-xl px-5 md:px-10 py-16">
           <h1 className="text-tprimary text-4xl font-bold">Signup</h1>
           <div className="my-5">
-            <InputField
-              label={"Full Name"}
-              placeholder={"Enter your full name"}
-              type={"text"}
-            />
-            <InputField
-              label={"Username"}
-              placeholder={"Enter your username"}
-              type={"text"}
-            />
+            <InputField label={"Full Name"} type={"text"} />
+            <InputField label={"Username"} type={"text"} />
             <InputField
               label={"Password"}
-              placeholder={"Enter your password"}
               type={"password"}
               isPassword={true}
             />

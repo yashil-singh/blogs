@@ -5,14 +5,14 @@ const StyledButton = ({ children, maxWidth, isOutline }) => {
     <>
       {isOutline ? (
         <button
-          className="p-2 border border-primary text-tprimary w-full h-full rounded-md min-w-[70px] hover:bg-primary font-semibold transition-all duration-200"
+          className="p-2 border border-primary text-tprimary w-full h-full rounded-md min-w-[70px] hover:bg-primary hover:text-white font-semibold transition-all duration-200"
           style={{ maxWidth: maxWidth }}
         >
           {children}
         </button>
       ) : (
         <button
-          className="p-2 bg-primary text-tprimary w-full h-full rounded-md min-w-[70px] hover:bg-primary/80 font-semibold transition-all duration-200"
+          className="p-2 bg-primary text-white w-full h-full rounded-md min-w-[70px] hover:bg-primary/80 font-semibold transition-all duration-200"
           style={{ maxWidth: maxWidth }}
         >
           {children}
